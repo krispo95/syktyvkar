@@ -14,10 +14,59 @@
             <h3>Меню</h3>
             <ul >
                 <li v-for="todo in todos">
-                    {{ todo.text }}
+                   <a href="#"> {{ todo.text }}</a>
                 </li>
             </ul>
         </div>
+        <div id="app" class="app">  
+            <div class="buttons-top">
+                <ul >
+                    <li>
+                        <a v-on:click="list" href="#">Список</a>
+                    </li>
+                    <li>
+                        <a v-on:click="add" href="#">Добавить</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list" v-if="page == 'list'">
+                    <ol>
+                        <li v-for="item in items">
+                            <a href="#" v-on:click="selectItem(item.id)">{{ item.name }}</a>
+                        </li>
+                    </ol> 
+            </div>
+            <div v-if="page == 'form'">
+                    <form>
+                        <div>
+                            <div v-if="mode == 'edit'">{{ item.name }}</div>
+                            <div v-if="mode == 'add'">
+                                <label for="name">Название</label>
+                                <input type="text" name="name" id="name" v-model="name"/>
+                            </div>
+                            <div>
+                                <label for="checkbox">Включен</label>
+                                <input type="checkbox" checked id="checkbox" v-model="checkbox"/>
+                            </div>
+                            <div>
+                                <label for="description">Описание</label>
+                                <input type="textarea" name="description" id="description" v-model="description"/>
+                            </div>
+                            <div>
+                                <label for="label">Ярлычок</label>
+                                <input type="textarea" name="label" id="label" v-model="label"/>
+                            </div>
+                            <div>
+                                <label for="color">Цвет</label>
+                                <input type="color" name="color" id="color" v-model="color"/>
+                            </div>
+                        </div>
+                        <input v-if="mode == 'add'" type="button" v-on:click="addItem" value="Добавить"/>
+                        <input v-if="mode == 'edit'" type="button" v-on:click="editItem" value="Изменить"/>
+                        <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem" value="Удалить"/>
+                    </form>
+                </div>
+        </div>     
         <script src="main.js"></script>
     </div>
 </body>

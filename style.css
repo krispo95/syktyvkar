@@ -19,11 +19,19 @@ body {
     display: table;
     clear: both;
 }
+.menu{
+    position: absolute;
+    top:60px;
+}
 .menu ul{
     list-style-image: url("img/ret.png");
     width: 200px;
-    border: 2px solid rgb(26,188,156);
+    border: 2px solid rgb(32, 224, 186);
     font-weight: bold;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
 }
 .menu h3{
     color: rgb(109, 108, 108);
@@ -37,4 +45,34 @@ body {
 .top h3{
     font-weight: bold;
     padding: 10px;
+}
+.app{
+    position: absolute;
+    left:380px;
+    top: 70px;
+}
+.buttons-top{
+    font-size: 18px;
+    width: 750px;
+    height: 60px;
+    margin-left: 20px;
+    border-bottom: 2px solid rgb(32, 224, 186);
+}
+.buttons-top ul{
+    display: inline-block;
+    text-transform: uppercase;
+    list-style: none;
+    padding-left: 0;
+}
+.buttons-top li{
+    float: left;
+    margin-right: 20px;
+}
+.buttons-top li a{
+    color: rgb(109, 108, 108);
+    text-decoration: none;
+}
+.list li a{
+    text-decoration: none;
+    color: black;
 }
