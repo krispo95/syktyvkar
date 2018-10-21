@@ -32,14 +32,14 @@ var menu = new Vue({
         checkbox: true,
         description: 'First description',
         label: 'First label',
-        color: '#111111',
+        color: '#000111',
       },
       "Second": {
         name: "Second",
         checkbox: false,
         description: 'Second description',
         label: 'Second label',
-        color: '#222222',
+        color: '#333000',
       },
     },
     formName: "",
@@ -96,9 +96,10 @@ var menu = new Vue({
       this.formColor = item.color;
     },
     deleteItem: function (itemName) {
-      this.page = 'form'; //this is workaround to forse rendering list
-      this.page = "list";
+      // this.page = 'form'; //this is workaround to forse rendering list
+      // this.page = "list";
       delete this.items[itemName];
+      this.$forceUpdate();
       this.items = this.items;
     }
   },
