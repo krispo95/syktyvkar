@@ -20,7 +20,7 @@ body {
     clear: both;
 }
 .menu{
-    position: absolute;
+    float: left;
     top:60px;
 }
 .menu ul{
@@ -47,7 +47,8 @@ body {
     padding: 10px;
 }
 .app{
-    position: absolute;
+    float: right;
+    margin-top:10px;
     left:380px;
     top: 70px;
 }
@@ -77,16 +78,29 @@ body {
     color: black;
 }
 .chip{
-    position: absolute;
+    width: 50px;
     top: 80px;
     left:20px;
     color: white;
     background-color: rgb(245,66,96);
     padding: 5px 10px 5px 10px;
     border-radius: 5px 5px 0 0;
+    margin-top: 20px;
+    margin-left:20px;
+}
+/* .labels{
+    width: 80px;
+    display: block;
+    float: left;
+    margin: 10px;
+} */
+.forms{
+    width: 600px;
+    float: right;
+    text-align: left;
 }
 .form-container{
-    position: absolute;
+    float:right;
     top: 110px;
     left:20px;
     width:750px;
@@ -114,4 +128,34 @@ body {
     margin-top: 10px;
     height: 30px;
     width: 100px;
+}
+.input{
+    border-radius: 5px;
+    border:1px solid rgb(167, 168, 168);
+    width:500px;
+    line-height: 26px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.field {
+    clear:both; 
+    text-align:right;
+}
+label {
+    float:left;
+}
+.main {
+    float:left;
+    top: 110px;
+    left:20px;
+    width:750px;
+}
+input[type=color]{
+    height: 30px;
+    padding: 5px;
+    width: 505px;
+}
+input[type=checkbox]{
+    width: 20px;
+    margin-right: 485px;
 }
