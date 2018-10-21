@@ -86,7 +86,12 @@
           this.formDescription = item.description;
           this.formLabel = item.label;
           this.formColor = item.color;
+        },
+        deleteItem: function(itemName){
+          this.page="list";
+          delete this.items[itemName];
         }
 },
+
 
 })

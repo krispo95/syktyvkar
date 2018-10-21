@@ -86,7 +86,7 @@
                                 
                                 <input v-if="mode == 'add'" type="button" v-on:click="addItem" value="Добавить" class="button"/>
                                 <input v-if="mode == 'edit'" type="button" v-on:click="editItem" value="Изменить" class="button"/>
-                                <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem" value="Удалить" class="button"/>
+                                <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem(formName)" value="Удалить" class="button"/>
                             </div>
                         
                         
