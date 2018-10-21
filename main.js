@@ -77,6 +77,7 @@ var menu = new Vue({
     editItem: function () {
       this.page = "list";
       this.items[this.formName] = {
+        name: this.formName,
         checkbox: this.formCheckbox,
         description: this.formDescription,
         label: this.formLabel,
