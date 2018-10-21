@@ -210,3 +210,42 @@ input[type=checkbox]{
     border: 1px solid black;
     box-shadow: 0 0 2px grey;
 }
+@media (max-width: 380px) {
+    body {
+        min-width: 350px;
+    }
+    .menu-mob{
+        display: none; 
+    }
+    .container {
+        width: 350px;
+        margin: 0 auto;
+        
+    }
+    .buttons-top{
+        font-size: 14px;
+        width: 350px;
+        height: 50px;
+        border-bottom: 2px solid rgb(32, 224, 186);
+    }
+    .buttons-top ul{
+        display: inline-block;
+        text-transform: uppercase;
+        list-style: none;
+        padding-left: 0;
+    }
+    .buttons-top li{
+        float: left;
+        margin-right: 20px;
+    }
+    .buttons-top li a{
+        color: rgb(109, 108, 108);
+        text-decoration: none;
+    }
+    .buttons-top li a:hover{
+        color: rgb(70, 69, 69); 
+    }
+    .list ol{
+        width: 350px;
+    }
+  }

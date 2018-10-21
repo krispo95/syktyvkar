@@ -24,6 +24,23 @@ var menu = new Vue({
 var menu = new Vue({
   el: '#app',
   data: {
+    todos: [
+      { text: 'Новости' },
+      { text: 'Свободные страницы' },
+      { text: 'Афиша' },
+      { text: 'Гости и эксперты' },
+      { text: 'Красота и здоровье' },
+      { text: 'Спецтемы' },
+      { text: 'Опросы' },
+      { text: 'Спавочники' },
+      { text: 'Вакансии' },
+      { text: 'Конкурсы' },
+      { text: 'Пользователи' },
+      { text: 'Фишки' },
+      { text: 'Меню сайта' },
+      { text: 'Актуальная информация' },
+      { text: 'Настройки' }
+    ],
     page: 'list',
     mode: 'add',
     items: {
@@ -83,6 +100,7 @@ var menu = new Vue({
         label: this.formLabel,
         color: this.formColor,
       };
+
     },
     selectItem: function (itemName) {
       this.page = "form";
@@ -101,6 +119,9 @@ var menu = new Vue({
       this.page= 'list';
       this.$forceUpdate();
       this.items = this.items;
+    },
+    openMenu: function(){
+      document.getElementsByClassName('menu-mob').style.display = "inline-block";
     }
   },
 

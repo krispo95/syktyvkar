@@ -11,16 +11,16 @@
             <h3>Выйти</h3>
         </div>
     </div>
-    <div class="container">
+    <div id="app" class="container">
         <div id="menu" class="menu">
-            <h3>Меню</h3>
-            <ul >
+            <h3 v-on:click="openMenu"> Меню</h3>
+            <ul class="menu-mob">
                 <li v-for="todo in todos">
                    <a href="#"> {{ todo.text }}</a>
                 </li>
             </ul>
         </div>
-        <div id="app" class="app">  
+        <div class="app">  
             <div class="buttons-top">
                 <ul >
                     <li>
@@ -94,7 +94,7 @@
                     </form>
                 </div>
         </div>     
-        <script src="main.js"></script>
     </div>
 </body>
+<script src="main.js"></script>
 </html>
