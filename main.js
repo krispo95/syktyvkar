@@ -27,11 +27,10 @@
         page:'list',
         mode: 'add',
         items: [
-            {name:"Weatcher", id:0},
-            {name:"Wither", id:1},
-            {name:"Fire", id:2},
+            {name:"Weatcher"},
+            {name:"Wither"},
+            {name:"Fire"},
         ],
-        idCounter: 3,
         name: "",
         checkbox: "",
         description: "",
@@ -50,7 +49,6 @@
         },
         addItem: function(){
         console.log("ok");
-        this.idCounter++;
          this.page="list";
          this.mode="add"
         this.items.push({
@@ -59,17 +57,16 @@
           description: this.description,
           label: this.label,
           color: this.color,
-          id: this.idConuter,
         })        
         },
         editItem:function(){
           this.page="list";
          this.mode="add";
         },
-        selectItem: function(itemId){
+        selectItem: function(itemName){
           this.page="form";
           this.mode="edit";
-          console.log(itemId);
+          console.log(itemName);
 
         }
 },
