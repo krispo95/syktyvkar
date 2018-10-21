@@ -37,8 +37,9 @@
                     </ol> 
             </div>
             <div v-if="page == 'form'">
-                    <form>
-                        <div>
+                    <div class="chip">Фишка</div>
+                    <form class="form-container">
+                        <div class="form">
                             <div v-if="mode == 'edit'">{{ item.name }}</div>
                             <div v-if="mode == 'add'">
                                 <label for="name">Название</label>
@@ -50,7 +51,7 @@
                             </div>
                             <div>
                                 <label for="description">Описание</label>
-                                <input type="textarea" name="description" id="description" v-model="description"/>
+                                <textarea rows="3" name="description" id="description" v-model="description"></textarea>
                             </div>
                             <div>
                                 <label for="label">Ярлычок</label>
@@ -61,7 +62,7 @@
                                 <input type="color" name="color" id="color" v-model="color"/>
                             </div>
                         </div>
-                        <input v-if="mode == 'add'" type="button" v-on:click="addItem" value="Добавить"/>
+                        <input v-if="mode == 'add'" type="button" v-on:click="addItem" value="Добавить" class="button"/>
                         <input v-if="mode == 'edit'" type="button" v-on:click="editItem" value="Изменить"/>
                         <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem" value="Удалить"/>
                     </form>

@@ -76,3 +76,42 @@ body {
     text-decoration: none;
     color: black;
 }
+.chip{
+    position: absolute;
+    top: 80px;
+    left:20px;
+    color: white;
+    background-color: rgb(245,66,96);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px 5px 0 0;
+}
+.form-container{
+    position: absolute;
+    top: 110px;
+    left:20px;
+    width:750px;
+}
+.form{
+    background-color: rgb(229,235,235);
+    border-top: 2px solid rgb(245,66,96);
+    border-bottom: 2px solid rgb(167, 168, 168);
+    border-radius: 0 5px 5px 5px;
+    padding: 10px;
+}
+
+.form label{
+    color: rgb(5,158,139);
+    padding: 10px 10px 10px 30px;
+    display: inline-block;
+}
+.button{
+    color:white;
+    background-color: rgb(8, 187, 166);
+    border: none;
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+}
