@@ -26,22 +26,27 @@
     data: {
         page:'list',
         mode: 'add',
-        items: [
-            {name:"Weatcher"},
-            {name:"Wither"},
-            {name:"Fire"},
-        ],
-        name: "",
-        checkbox: "",
-        description: "",
-        label: "",
-        color: "",
+        items: {
+          "Weatcher" : {name:"Weatcher"},
+          "Wither" : {name:"Wither"},
+          "Fire" : {name:"Fire"},
+       },
+        formName: "",
+        formCheckbox: "",
+        formDescription: "",
+        formLabel: "",
+        formColor: "",
     },
     methods: {
         add: function() {
             this.page = 'form';  
             this.mode = 'add';
             this.message="form";
+            this.formName = '';
+            this.formCheckbox = '';
+            this.formDescription = '';
+            this.formLabel = '';
+            this.formColor = '';
         },
         list: function() {
             this.page= 'list';  
@@ -50,24 +55,37 @@
         addItem: function(){
         console.log("ok");
          this.page="list";
-         this.mode="add"
-        this.items.push({
-          name: this.name,
-          checkbox: this.checkbox,
-          description: this.description,
-          label: this.label,
-          color: this.color,
-        })        
+         this.mode="add";
+         this.items[this.formName] = {
+          name: this.formName,
+          checkbox: this.formCheckbox,
+          description: this.formDescription,
+          label: this.formLabel,
+          color: this.formColor,
+         };
+
         },
         editItem:function(){
           this.page="list";
          this.mode="add";
+         this.items[this.formName] = {
+          checkbox: this.formCheckbox,
+          description: this.formDescription,
+          label: this.formLabel,
+          color: this.formColor,
+         };
         },
         selectItem: function(itemName){
           this.page="form";
           this.mode="edit";
-          console.log(itemName);
-
+          var item = this.items[itemName];
+          console.log(item);
+          console.log(item.color);
+          this.formName = item.name;
+          this.formCheckbox = item.checkbox;
+          this.formDescription = item.description;
+          this.formLabel = item.label;
+          this.formColor = item.color;
         }
 },
 

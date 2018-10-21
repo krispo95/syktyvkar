@@ -59,34 +59,37 @@
                         </div> -->
                         <div class="main">
                             <div class="form clearfix">   
+
                                 <div class="field">
                                    <label for="name">Название</label>
-                                   <input class="input" type="text" name="name" id="name" v-model="name"/>
+                                   <input v-if="mode == 'add'" class="input" type="text" name="name" id="name" v-model="formName"/>
+                                   <div class="form-name" v-if="mode == 'edit'" >{{ formName }}</div>
                                 </div>
                                 
                                 <div class="field">
                                    <label for="checkbox">Включен</label>
-                                   <input class="input" type="checkbox" checked id="checkbox" v-model="checkbox"/>
+                                   <input class="input" type="checkbox" checked id="checkbox" v-model="formCheckbox"/>
                                 </div>
                                 <div class="field">
                                     <label for="description">Описание</label>
-                                    <textarea class="input" rows="2" name="description" id="description" v-model="description"></textarea>
+                                    <textarea class="input" rows="2" name="description" id="description" v-model="formDescription"></textarea>
                                 </div>
                                 <div class="field">
                                     <label for="label">Ярлычок</label>
-                                    <input class="input" type="textarea" name="label" id="label" v-model="label"/>
+                                    <input class="input" type="textarea" name="label" id="label" v-model="formLabel"/>
                                 </div>
                                 <div class="field">
                                     <label for="color">Цвет</label>
-                                    <input class="input" type="color" name="color" id="color" v-model="color"/>
+                                    <input class="input" type="color" name="color" id="color" v-model="formColor"/>
                                 </div>
                             </div>
                                 
                                 <input v-if="mode == 'add'" type="button" v-on:click="addItem" value="Добавить" class="button"/>
-                        </div>
+                                <input v-if="mode == 'edit'" type="button" v-on:click="editItem" value="Изменить" class="button"/>
+                                <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem" value="Удалить" class="button"/>
+                            </div>
                         
-                        <!-- <input v-if="mode == 'edit'" type="button" v-on:click="editItem" value="Изменить"/>
-                        <input v-if="mode == 'edit'" type="button" v-on:click="deleteItem" value="Удалить"/> -->
+                        
                     </form>
                 </div>
         </div>     

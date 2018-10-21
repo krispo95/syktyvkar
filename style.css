@@ -159,3 +159,10 @@ input[type=checkbox]{
     width: 20px;
     margin-right: 485px;
 }
+.form-name{
+    float:left;
+    margin-left: 125px;
+    padding-top: 10px;
+    font-size: 18px;
+    color: rgb(101, 102, 102);
+}
