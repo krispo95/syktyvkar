@@ -96,9 +96,8 @@ var menu = new Vue({
       this.formColor = item.color;
     },
     deleteItem: function (itemName) {
-      // this.page = 'form'; //this is workaround to forse rendering list
-      // this.page = "list";
       delete this.items[itemName];
+      this.page= 'list';
       this.$forceUpdate();
       this.items = this.items;
     }

@@ -73,6 +73,9 @@ body {
     color: rgb(109, 108, 108);
     text-decoration: none;
 }
+.buttons-top li a:hover{
+    color: rgb(70, 69, 69);
+}
 .list li a{
     text-decoration: none;
     color: black;
@@ -129,6 +132,13 @@ body {
     height: 30px;
     width: 100px;
 }
+.button:hover{
+    background-color:rgb(5, 172, 152);
+}
+.button:active{
+    background-color:rgb(5, 172, 152);
+    color: rgba(255, 255, 255, 0.5);
+}
 .input{
     border-radius: 5px;
     border:1px solid rgb(167, 168, 168);
@@ -165,4 +175,38 @@ input[type=checkbox]{
     padding-top: 10px;
     font-size: 18px;
     color: rgb(101, 102, 102);
+}
+.list ol{
+    list-style: none;
+    width: 750px;
+    padding-left:20px;
+}
+.list li{
+    height: 40px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+.list li a{
+    color: blue;
+}
+.button-list{
+    float: right;
+    color:blue;
+    background-color: white;
+    border: 1px solid blue;
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    font-size: 14px;
+    margin-right: 30px;
+    height: 30px;
+    width: 80px;
+}
+.button-list:hover{
+    color: black;
+    border: 1px solid black;
+}
+.button-list:active{
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0 0 2px grey;
 }
