@@ -210,11 +210,11 @@ input[type=checkbox]{
     border: 1px solid black;
     box-shadow: 0 0 2px grey;
 }
-@media (max-width: 380px) {
+@media (orientation: portrait) {
     body {
         min-width: 350px;
     }
-    .menu-mob{
+    .menu{
         display: none; 
     }
     .container {
