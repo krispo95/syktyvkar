@@ -210,42 +210,122 @@ input[type=checkbox]{
     border: 1px solid black;
     box-shadow: 0 0 2px grey;
 }
-@media (orientation: portrait) {
+@media only screen  
+  and (max-width: 667px) 
+  and (orientation: portrait) { 
     body {
-        min-width: 350px;
+        min-width: 100%;
     }
     .menu{
         display: none; 
     }
     .container {
-        width: 350px;
+        width: 100%;
         margin: 0 auto;
         
     }
-    .buttons-top{
-        font-size: 14px;
-        width: 350px;
+    .buttons-top{ 
+        width: 100%;
         height: 50px;
-        border-bottom: 2px solid rgb(32, 224, 186);
     }
     .buttons-top ul{
-        display: inline-block;
-        text-transform: uppercase;
-        list-style: none;
         padding-left: 0;
     }
     .buttons-top li{
         float: left;
         margin-right: 20px;
     }
-    .buttons-top li a{
-        color: red;
-        text-decoration: none;
-    }
-    .buttons-top li a:hover{
-        color: rgb(70, 69, 69); 
-    }
     .list ol{
-        width: 350px;
+        width: 100%;
     }
+    .list li a{
+        margin-left: 5px;
+    }
+    .buttons-top li a{
+        margin-left: 5px;
+    }
+    .app{
+        float:none;
+        margin-top:10px;
+        left:0;
+        top: 70px;
+        padding-right: 30px;
+    }
+    .button-list{
+        margin-right: 10px;
+    }
+    .right{
+        float:right;
+    }
+    .chip{
+        width: 50px;
+        top: 80px;
+        left:20px;
+        color: white;
+        background-color: rgb(245,66,96);
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px 5px 0 0;
+        margin-top: 20px;
+        margin-left:20px;
+    }
+    .forms{
+        width: 95%;
+        text-align: left;
+    }
+    .form-container{
+        width:97%;
+        float: none;
+        margin-left: 20px;
+    }
+    .form{
+        background-color: rgb(229,235,235);
+        border-top: 2px solid rgb(245,66,96);
+        border-bottom: 2px solid rgb(167, 168, 168);
+        border-radius: 0 5px 5px 5px;
+        padding: 10px;
+    }
+    
+    .form label{
+        color: rgb(5,158,139);
+        padding: 10px 10px 10px 10px;
+        display: inline-block;
+    }
+    .button{
+        color:white;
+        background-color: rgb(8, 187, 166);
+        border: none;
+        display: inline-block;
+        padding: 5px 5px 5px 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        height: 30px;
+        width: 100px;
+  }
+  .main {
+    float:left;
+    top: 110px;
+    left:20px;
+    width:100%;
+}
+input[type=color]{
+    height: 30px;
+    padding: 5px;
+    width: 80%;
+}
+input[type=checkbox]{
+    width: 20px;
+    margin-right: 80%;
+}
+.form-name{
+    margin-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+    color: rgb(101, 102, 102);
+}
+.input{
+    width:95%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
   }
