@@ -21,6 +21,7 @@ var app = new Vue({
     ],
     page: 'list',
     mode: 'add',
+    menuMobStyle: '',
     items: {
       "First": {
         name: "First",
@@ -103,7 +104,12 @@ var app = new Vue({
       this.save();
     },
     openMenu: function(){
-      document.getElementsByClassName('menu-mob').style.display = "inline-block";
+      if (this.menuMobStyle==''){
+        this.menuMobStyle='display: block';
+      }else{
+        this.menuMobStyle='';
+      }
+      
     },
     save: function(){
       var itemsJSON=JSON.stringify(this.items);

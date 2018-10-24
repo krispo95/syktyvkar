@@ -13,9 +13,9 @@
         </div>
     </div>
     <div id="app" class="container">
-        <div id="menu" class="menu">
-            <h3 v-on:click="openMenu"> Меню</h3>
-            <ul class="menu-mob">
+        <div v-on:click="openMenu" id="menu" class="menu">
+            <h3 > Меню</h3>
+            <ul class="menu-mob" :style="menuMobStyle">
                 <li v-for="todo in todos">
                    <a href="#"> {{ todo.text }}</a>
                 </li>
