@@ -210,7 +210,8 @@ input[type=checkbox]{
     border: 1px solid black;
     box-shadow: 0 0 2px grey;
 }
-@media only screen  
+@media only screen 
+  and (min-width: 300px)
   and (max-width: 667px) 
   and (orientation: portrait) { 
     body {
@@ -300,32 +301,32 @@ input[type=checkbox]{
         margin-top: 10px;
         height: 30px;
         width: 100px;
-  }
-  .main {
-    float:left;
-    top: 110px;
-    left:20px;
-    width:100%;
-}
-input[type=color]{
-    height: 30px;
-    padding: 5px;
-    width: 80%;
-}
-input[type=checkbox]{
-    width: 20px;
-    margin-right: 80%;
-}
-.form-name{
-    margin-left: 10px;
-    padding-top: 10px;
-    font-size: 18px;
-    color: rgb(101, 102, 102);
-}
-.input{
-    width:95%;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+    }
+    .main {
+        float:left;
+        top: 110px;
+        left:20px;
+        width:100%;
+    }
+    input[type=color]{
+        height: 30px;
+        padding: 5px;
+        width: 95%;
+    }
+    input[type=checkbox]{
+        width: 20px;
+        margin-right: 80%;
+    }
+    .form-name{
+        margin-left: 10px;
+        padding-top: 10px;
+        font-size: 18px;
+        color: rgb(101, 102, 102);
+    }
+    .input{
+        width:95%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
 
-  }
+}
