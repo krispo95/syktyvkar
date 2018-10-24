@@ -1,27 +1,5 @@
-var menu = new Vue({
-  el: '#menu',
-  data: {
-    todos: [
-      { text: 'Новости' },
-      { text: 'Свободные страницы' },
-      { text: 'Афиша' },
-      { text: 'Гости и эксперты' },
-      { text: 'Красота и здоровье' },
-      { text: 'Спецтемы' },
-      { text: 'Опросы' },
-      { text: 'Спавочники' },
-      { text: 'Вакансии' },
-      { text: 'Конкурсы' },
-      { text: 'Пользователи' },
-      { text: 'Фишки' },
-      { text: 'Меню сайта' },
-      { text: 'Актуальная информация' },
-      { text: 'Настройки' }
-    ]
-  }
-})
-
-var menu = new Vue({
+const storageKey = 'items';
+var app = new Vue({
   el: '#app',
   data: {
     todos: [
@@ -89,6 +67,7 @@ var menu = new Vue({
         label: this.formLabel,
         color: this.formColor,
       };
+      this.save();
 
     },
     editItem: function () {
@@ -100,8 +79,10 @@ var menu = new Vue({
         label: this.formLabel,
         color: this.formColor,
       };
+      this.save();
 
     },
+    
     selectItem: function (itemName) {
       this.page = "form";
       this.mode = "edit";
@@ -119,11 +100,22 @@ var menu = new Vue({
       this.page= 'list';
       this.$forceUpdate();
       this.items = this.items;
+      this.save();
     },
     openMenu: function(){
       document.getElementsByClassName('menu-mob').style.display = "inline-block";
-    }
+    },
+    save: function(){
+      var itemsJSON=JSON.stringify(this.items);
+      console.log(itemsJSON);
+      localStorage.setItem(storageKey, itemsJSON)
+    },
+    load:function(){
+      var storageItems = localStorage.getItem(storageKey);
+      if (storageItems!=null && storageItems!=""){
+        this.items= JSON.parse(storageItems);
+      }
+  }
   },
-
-
-})
+});
+app.load();
